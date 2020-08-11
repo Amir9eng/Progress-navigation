@@ -15,7 +15,7 @@ const Content = document.getElementById("content")
    optionsElement.innerHTML= "";
    options.forEach(option => {
      optionsElement.innerHTML +=
-     `<span class="option ${option=selected ? "selected": ""}" data-rating='${option}'>${option}</span>`
+     `<span class="option ${option==selected ? "selected": ""}" data-rating='${option}'>${option}</span>`
    });
 
    let ChangeCase=selected.toLowerCase();
