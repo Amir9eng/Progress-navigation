@@ -1,14 +1,16 @@
 // setup and initialization
 const options = [
-  'POSITVE',
-  'NEGATIVE',
- ' NEUTRAL'
+  'positive',
+  'negative',
+ 'neutral'
 ]
-let selected= 'NEGATIVE';
+let selected= 'negative';
 
 // Selectors
 const optionsElement = document.getElementById('options');
-const Content = document.getElementById("content")
+const ContentElement = document.getElementById("content")
+const formElement = document.getElementById('form')
+const indexElement = document.getElementById('index')
 
 // utilities and functions
  function render() {
@@ -18,9 +20,26 @@ const Content = document.getElementById("content")
      `<span class="option ${option==selected ? "selected": ""}" data-rating='${option}'>${option}</span>`
    });
 
-   let ChangeCase=selected.toLowerCase();
-   Content.innerText= ChangeCase.replace(ChangeCase[0], ChangeCase[0].toUpperCase() )  + ' Content'
+   ContentElement.innerText = `${selected} content`
  }
 
  render()
 
+optionsElement.addEventListener('click', (e) => {
+  selected = e.target.dataset.rating
+  render()
+})
+
+formElement.addEventListener('submit', e => {
+  e.preventDefault()
+
+  const input = indexElement.value
+  if (input < 1 || input > 3) {
+    alert('invalid index!')
+    return
+  }
+
+  selected = options[input - 1]
+  indexElement.value = ''
+  render()
+})
