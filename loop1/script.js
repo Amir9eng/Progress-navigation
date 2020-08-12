@@ -25,6 +25,7 @@ const indexElement = document.getElementById('index')
 
  render()
 
+ // Triggers
 optionsElement.addEventListener('click', (e) => {
   selected = e.target.dataset.rating
   render()
