@@ -30,7 +30,7 @@ optionsElement.addEventListener('click', (e) => {
   selected = e.target.dataset.rating
   render()
 })
-
+  
 formElement.addEventListener('submit', e => {
   e.preventDefault()
 
