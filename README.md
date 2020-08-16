@@ -18,7 +18,7 @@ Browser version must be recent for better experience.
 
 ## Features
 
-- Search
+- Content editing
 
 - Tab index
 
