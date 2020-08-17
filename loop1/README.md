@@ -6,7 +6,7 @@ Progress-navigation-bar is an implementation of a navigation-bar Interface.
 
 [Demo](https://progressnav.netlify.app/)
 
-![Screenshot](echo-shoot.png)
+![Screenshot](./loop.png)
 
 ## Getting started
 
